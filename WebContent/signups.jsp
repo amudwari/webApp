@@ -36,6 +36,7 @@
         <th>Email</th>
         <th>Mobile</th>
         <th>Gender</th>
+        <th>Action </th>
       </tr> 
     </thead>
 		<tbody>
@@ -51,6 +52,18 @@
 			<td><%=s.getEmail()%></td>		
 			<td><%=s.getMobile()%></td>		
 			<td><%=s.getGender()%></td>		
+			
+			<td>
+
+			  <a href="deleteSignup?ddata=<%=s.getEmail()%>">
+            <img alt="" src="img/del.png" style="width:8%;" >
+            </a>
+		 &nbsp;
+			  <a href="editSignup?ddata=<%=s.getEmail()%>">
+            <img alt="" src="img/edit.png" style="width: 8%;" >
+            </a>
+          </td>
+					
          </tr> 
          
          <%
