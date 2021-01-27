@@ -27,10 +27,10 @@ public class DeleteSignupServlet extends HttpServlet{
 
 			Class.forName("com.mysql.jdbc.Driver");
 			
-			String sql=" delete from profile where email = ?";
+			String sql=" delete from profile where email=?";
 			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3307/signup_db","root","root");
 			// pstmt -contains compiled query
-						PreparedStatement pstmt=con.prepareStatement(sql);
+				PreparedStatement pstmt=con.prepareStatement(sql);
 						
 						//setting values inside the place holders
 						pstmt.setString(1, email);

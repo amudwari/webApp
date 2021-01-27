@@ -14,8 +14,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
-@WebServlet("/sign")
-public class SignupServlet extends HttpServlet {
+@WebServlet("/updateSignup")
+public class UpdateSignupServlet extends HttpServlet {
 	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -32,11 +32,13 @@ public class SignupServlet extends HttpServlet {
 		//code for JDBC programming
 	
 		try{
-			
+			//Loading the driver
+			//below is present inside jar file
 			Class.forName("com.mysql.jdbc.Driver");
 			
-			String sql="insert into profile (username,password,email,name,mobile,gender,doe)" + "values(?,?,?,?,?,?,?)";
+			String sql="update profile set username=?,password=?,name=?,mobile=?,gender=? where email=?";
 
+			//making connection to the database
 			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3307/signup_db","root","root");
 			// pstmt -contains compiled query
 						PreparedStatement pstmt=con.prepareStatement(sql);
@@ -44,18 +46,11 @@ public class SignupServlet extends HttpServlet {
 						//setting values inside the place holders
 						pstmt.setString(1, username);
 						pstmt.setString(2, password);
-						pstmt.setString(3, email);
-						pstmt.setString(4, name);
-						pstmt.setString(5, mobile);
-						pstmt.setString(6, gender);
-					
-						//Creating instance of Timestamp
-						long millis = new Date().getTime();
-						Timestamp timestamp=new Timestamp(millis);
-						
-						pstmt.setTimestamp(7, timestamp);
-						
-						
+						pstmt.setString(3, name);
+						pstmt.setString(4, mobile);
+						pstmt.setString(5, gender);
+						pstmt.setString(6, email);
+
 						//fire the query!!!
 						pstmt.executeUpdate();
 						
@@ -63,11 +58,7 @@ public class SignupServlet extends HttpServlet {
 						e.printStackTrace();
 
 		}
-
-		Signup signup = new Signup(username, password, email, name, mobile, gender);
-	
-		req.setAttribute("data", signup);
-		req.getRequestDispatcher("review.jsp").forward(req, resp);
+		req.getRequestDispatcher("signups").forward(req, resp);
 	
 	}
 

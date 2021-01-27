@@ -32,8 +32,9 @@
   	   <tr>
         <th>Username</th>
         <th>Password</th>
-        <th>Name</th>
         <th>Email</th>
+        <th>Name</th>
+
         <th>Mobile</th>
         <th>Gender</th>
         <th>Action </th>
@@ -48,8 +49,9 @@
 		<tr> 
 			<td><%=s.getUsername()%></td>		
 			<td><%=s.getPassword()%></td>		
+			<td><%=s.getEmail()%></td>
 			<td><%=s.getName()%></td>		
-			<td><%=s.getEmail()%></td>		
+
 			<td><%=s.getMobile()%></td>		
 			<td><%=s.getGender()%></td>		
 			

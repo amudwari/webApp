@@ -25,8 +25,9 @@
   	   <tr>
         <th>Username</th>
         <th>Password</th>
-        <th>Name</th>
         <th>Email</th>
+
+        <th>Name</th>
         <th>Mobile</th>
         <th>Gender</th>
         
@@ -36,8 +37,9 @@
 		<tr> 
            <td> ${data.username}</td>
             <td> ${data.password}</td>
+             <td> ${data.email}</td>
+
               <td> ${data.name}</td>
-               <td> ${data.email}</td>
                 <td> ${data.mobile}</td>
                  <td> ${data.gender}</td>
 

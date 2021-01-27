@@ -18,7 +18,7 @@ public class Signup {
 		
 	}
 	
-	public Signup(String username, String password, String name, String email, String mobile, String gender) {
+	public Signup(String username, String password, String email,String name,String mobile, String gender) {
 		this.username = username;
 		this.password = password;
 		this.name = name;
@@ -72,7 +72,7 @@ public class Signup {
 
 	@Override
 	public String toString() {
-		return "signup [username=" + username + ", password=" + password + ", name=" + name + ", email=" + email
+		return "signup [username=" + username + ", password=" + password + ", email=" + email + ", name=" + name
 				+ ", mobile=" + mobile + ", gender=" + gender + "]";
 	}
 
