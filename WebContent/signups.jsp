@@ -14,6 +14,8 @@
 </head>
 <body>
 <header style="height: 30px;background-color: yellow;">
+
+     Hi, Goodmorning  <b>${sessionScope.data.name}</b>!!
 </header>
 
 <div class =  " container">
@@ -51,7 +53,6 @@
 			<td><%=s.getPassword()%></td>		
 			<td><%=s.getEmail()%></td>
 			<td><%=s.getName()%></td>		
-
 			<td><%=s.getMobile()%></td>		
 			<td><%=s.getGender()%></td>		
 			
@@ -74,6 +75,11 @@
              
 	</tbody>
 	</table>
+	
+	       <a href="logout">
+<button type="button" class="btn btn-danger">Logout</button>
+</a>
+	
 </div>
 
 </body>

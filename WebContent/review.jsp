@@ -26,7 +26,6 @@
         <th>Username</th>
         <th>Password</th>
         <th>Email</th>
-
         <th>Name</th>
         <th>Mobile</th>
         <th>Gender</th>
@@ -38,7 +37,6 @@
            <td> ${data.username}</td>
             <td> ${data.password}</td>
              <td> ${data.email}</td>
-
               <td> ${data.name}</td>
                 <td> ${data.mobile}</td>
                  <td> ${data.gender}</td>
@@ -46,7 +44,11 @@
          </tr>     
 	</tbody>
 	</table>
-</div>
+  <a href="login.jsp">Sign In</a>
+  <a href="signups">
+<button type="button" class="btn btn-danger">All Data</button>
+</a>
 
+</div>
 </body>
 </html>

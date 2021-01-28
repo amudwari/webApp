@@ -1,5 +1,4 @@
-
-<!DOCTYPE html >
+<!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8">
@@ -7,24 +6,19 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script><title>Insert title here</title>
-<title>Sign in</title>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
+<title>Sign in</title>
 </head>
 <body>
     <header style="height: 30px;background-color: yellow;">
-		</header>
+    
+    </header>
     <div class="container">
+        <img alt="" src="img/login.png" style="height: 100px;">
         <h2>Login Please</h2>
         <span style="font-size: 18px;color: red;font-weight: bold;">${message}</span>
-
- <hr/>
-        <span style="font-size: 18px;color: blue;font-weight: bold;">${applicationScope.email}</span>
-        <span style="font-size: 18px;color: pink;font-weight: bold;">${applicationScope.mobile}</span>
-        <span style="font-size: 18px;color: purple;font-weight: bold;">${applicationScope.address}</span>
-<hr/> 
-        
-  <form action="signin" method="post">
+        <form action="signin" method="post">
 <label>Username</label>
 <input type="text" name="username" class="form-control" style="width: 60%;">
 
@@ -39,7 +33,6 @@
 </a>
 </form>
     
-
-</div>
+    </div>
 </body>
 </html>
